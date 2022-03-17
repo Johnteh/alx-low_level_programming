@@ -1,5 +1,4 @@
 #include "main.h"
-char text[9] = "_putchar";
 
 /**
  * main - prints _putchar
