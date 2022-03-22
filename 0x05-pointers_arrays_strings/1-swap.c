@@ -13,13 +13,9 @@
 void swap_int(int *a, int *b)
 
 {
-
-  	int tempnum;
-	tempnum = *a;
-	*a = *b;
-	*b = tempnum;
-
-
-
-
+ int tempnum;
+        tempnum = *a;
+        *a = *b;
+        *b = tempnum;
 }
+
