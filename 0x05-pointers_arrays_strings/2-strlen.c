@@ -9,7 +9,7 @@
  * Return: Always 0.
  */
 
-void int _strlen(char *s)
+void strlen(char *s)
 {
 int i = 0;
 while (s[i] !=0)
