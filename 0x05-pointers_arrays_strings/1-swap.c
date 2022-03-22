@@ -19,9 +19,7 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	*b = tempnum;
 
-  
-  
-	swap_int(&a, &b);
+ 
        
 	return (0);
 }
