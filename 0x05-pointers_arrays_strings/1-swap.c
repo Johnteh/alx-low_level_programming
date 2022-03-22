@@ -7,13 +7,16 @@
  * Return: Always 0.
  *
  */
-int main( ) 
+int main(void swap_int) 
+	
 {
+	{	
 	int a;
 	int b;
 
 	a = 98;
 	b = 42;
 	swap_int(&a, &b);
+        }
 	return (0);
 }
