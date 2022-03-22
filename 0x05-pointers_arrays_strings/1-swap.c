@@ -2,21 +2,21 @@
 #include <stdio.h>
 
 /**
- * 1-swap.c - swaps the values of two integers.
+ * swap_int - function that swaps the values of two integers.
  * 
- * Return: Always 0.
+ * @a: number 1.
  *
+ * @b: number 2.
+ *
+ *Return : 0.
  */
-int main(void swap_int) 
+void swap_int(int *a, int *b)
 	
 {
-	{	
-	int a;
-	int b;
 
-	a = 98;
-	b = 42;
-	swap_int(&a, &b);
-        }
+ 	*a = 98;
+       *b = 42;
+	swap_int(*a, *b);
+       
 	return (0);
 }
