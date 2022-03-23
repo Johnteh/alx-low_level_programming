@@ -4,21 +4,20 @@
 /**
  * swap_int - function that swaps the values of two integers.
  *
- * @a: number 1.
+ * @a: first integer
  *
- * @b: number 2.
+ * @b: second integer
  *
- *Return : 0.
+ *
  */
 void swap_int(int *a, int *b)
 
 {
-int tempnum;
+	int tempnum;
 
-        tempnum = *a;
-
-        *a = *b;
-
-        *b = tempnum;
+        tempnum = 0;
+	tempnum = *a;
+	*a =*b;
+	*b = tempnum;
 }
 
