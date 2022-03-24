@@ -25,7 +25,3 @@ dest[length] = src[j];
 dest[length] = '\0';
 return (dest);
 }
-
-
-
-}
