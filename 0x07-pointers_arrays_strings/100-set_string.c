@@ -8,15 +8,17 @@
  */
 void set_string(char **s, char *to)
 {
-	char **ptr2, *ptr1;
+	char *p, **q;
 	int i = 0;
 
 	while (s[i] != '\0')
 	{
-		ptr1 =  &i;
-		ptr2 = ptr1;
+		*p =  &i;
+		**q = &p;
 	
 	}
-	i++
+	
+	printf("a=%d\n",**q);
+		
 }
 
