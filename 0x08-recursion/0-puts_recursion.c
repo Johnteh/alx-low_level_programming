@@ -11,9 +11,13 @@ void _puts_recursion(char *s)
 	_putchar(s[i]);
 	i++;
 
-	if (i=n);
+	if (i = n);
+	{
 		return s;	
+	}
 	else;
+	{
 	_puts_recursion(s[i]);
+	}
 
 }
