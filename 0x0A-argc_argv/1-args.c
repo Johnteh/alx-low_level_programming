@@ -6,7 +6,7 @@
  * @argv: holds the arguments
  *Return: 0
  */
-int main (int argc, char *argv[])
+int main (int argc, char *argv[] __attribute__((unused)))
 {
 	if (argc > o)
 		printf("%d\n", argc-1);
