@@ -1,7 +1,1 @@
-
-/**
-*creates a static library called liball.a.
-*from all the .c files.
-*/
-#!/bin/bash
-gcc -c add .
+create_static_lib.sh
