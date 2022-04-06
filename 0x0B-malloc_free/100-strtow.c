@@ -1,85 +1,45 @@
+#include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * strtow - char
- * @str: pointer to string params
- * Return: char
+ * argstostr - prints args
+ * @ac: takes in width of grid
+ * @av: height of grid
+ * Return: the args one line at a time
  */
 
-char **strtow(char *str)
+char *argstostr(int ac, char **av)
 {
-	int i = 0, j = 0, k = 0;
-	int len = 0, count = 0;
-	char **f, *col;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
-	if (!str || !*str)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	while (a < ac)
+	{
+		b = 0;
+		while (av[a][b] != '\0')
+		{
+			count++;
+			b++;
+		}
+		a++;
+	}
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-
-	while (*(str + i))
+	for (a = 0; a < ac; a++)
 	{
-		if (*(str + i) != ' ')
+		for (b = 0; av[a][b] != '\0'; b++)
 		{
-			if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
-			{
-				count += 1;
-			}
+			str[c] = av[a][b];
+			c++;
 		}
-		i++;
+		str[c] = '\n';
+		c++;
 	}
-
-	if (count == 0)
-	{
-		return (NULL);
-	}
-	count += 1;
-	f = malloc(sizeof(char *) * count);
-
-	if (!f)
-	{
-		return (NULL);
-	}
-	i = 0;
-
-	while (*str)
-	{
-		while (*str == ' ' && *str)
-		{
-			str++;
-		}
-		len = 0;
-
-		while (*(str + len) != ' ' && *(str + len))
-		{
-			len += 1;
-		}
-		len += 1;
-		col = malloc(sizeof(char) * len);
-
-		if (!col)
-		{
-			for (k = j - 1; k >= 0; k--)
-			{
-				free(f[k]);
-			}
-			free(f);
-			return (NULL);
-		}
-
-		for (k = 0; k < (len - 1);  k++)
-		{
-			*(col + k) = *(str++);
-		}
-		*(col + k) = '\0';
-		*(f + j) = col;
-
-		if (j < (count - 1))
-		{
-			j++;
-		}
-	}
-	*(f + j) = NULL;
-	return (f);
-} /*yes*/
-
+	return (str);
+}
